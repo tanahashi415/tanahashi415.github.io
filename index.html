@@ -29,6 +29,12 @@
             margin: 0;
             font-size: 2.5rem;
         }
+        .last-updated {
+            color: #ccc;
+            font-size: 0.9rem;
+            margin-top: 5px;
+            font-weight: normal;
+        }
         nav {
             background: #444;
             padding: 1rem;
@@ -121,6 +127,10 @@
             width: 100%;
             height: 100%;
         }
+        .project-explain ul li{
+          padding-top: 1px;
+          padding-bottom: 1px;
+        }
         ul {
             list-style: none;
             padding: 0;
@@ -131,17 +141,27 @@
         ul li strong {
             color: #555;
         }
-        #skills ul {
-            display: flex;
-            flex-wrap: wrap;
+        .skills-table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
         }
-        #skills li {
-            background: #e4e4e4;
-            color: #333;
-            padding: 5px 15px;
-            margin: 5px;
-            border-radius: 5px;
+        .skills-table th, .skills-table td {
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            text-align: left;
+            vertical-align: middle; /* 上下中央揃え */
         }
+        .skills-table th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        .skills-table tbody tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .skills-table td:nth-child(1) { width: 20%; } /* スキル名の列幅 */
+        .skills-table td:nth-child(2) { width: 10%; } /* 使用年数の列幅 */
+        .skills-table td:nth-child(3) { width: 70%; } /* 詳細の列幅 */
         footer {
             text-align: center;
             padding: 20px;
@@ -161,6 +181,7 @@
     <header>
         <div class="container">
             <h1>Tanahashi's Portfolio</h1>
+            <p class="last-updated">最終更新日：2025年7月9日</p>
         </div>
     </header>
 
@@ -177,7 +198,18 @@
     <div class="container">
         <section id="about-me">
             <h2>About Me</h2>
-            <p>ゲームプログラマー志望の大学院生。</p>
+            <h3>自己紹介</h3>
+            <p>27卒のゲームプログラマーを目指している大学院生です。大学院では生成AIの応用に関する研究をしています。</p>
+            <p>普段からUnityでゲームを作って、学園祭で展示したり<a href="https://unityroom.com/users/5mblykan2p7xvrgi0h1t" target="_blank">unityroom</a>に投稿したりしています。最近はプログラミングスキル向上のために<a href="https://atcoder.jp/users/yoCmasa" target="_blank">競技プログラミング</a>を始めました。趣味はゲームはもちろん、リアル脱出ゲームのような謎解きや、ボードゲームにも目がありません。</p>
+            <p>面白いゲームやロジックについて話すのが大好きなので、ぜひ皆さんと色々お話しできたら嬉しいです。</p>
+            <h3>学歴</h3>
+            <ul>
+              <li>2021年3月　岐阜県立岐山高等学校 普通科 卒業</li>
+              <li>2021年4月　大阪府立大学 工学域 電気電子系学類 入学</li>
+              <li>2025年3月　大阪府立大学 工学域 電気電子系学類 情報工学課程 卒業</li>
+              <li>2025年4月　大阪公立大学大学院 情報学研究科 基幹情報学専攻 入学</li>
+              <li>現在、同大学院、修士1年</li>
+            </ul>
         </section>
 
         <hr>
@@ -198,55 +230,36 @@
                             <iframe src="Movies/JapanesePancakes.mp4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
                     </div>
-                    <div>
-                        <p><strong>ゲーム説明：</strong> 真夏の日本でパンケーキを焼くゲームです。マウス操作でフライパンを傾けて、パンケーキを焦がさないように焼き、制限時間内にスコアを稼ぎます。パンケーキをひっくり返すと加点（半回転：100点、1回転：500点、1回転半：2000点）、焦がしたり落としたりすると減点されます。 </p>
+                    <div class="project-explain">
+                        <p>
+                          <strong>ゲーム説明</strong><br>
+                          真夏の日本でパンケーキを焼くゲームです。マウス操作でフライパンを傾けて、パンケーキを焦がさないように焼き、制限時間内にスコアを稼ぎます。
+                          パンケーキをひっくり返すと加点（半回転：100点、1回転：500点、1回転半：2000点）、焦がしたり落としたりすると減点されます。
+                        </p>
+                        <p>
+                          <strong>開発期間</strong><br>
+                          1週間（50時間程度）
+                        </p>
+                        <p>
+                          <strong>開発メンバー</strong><br>
+                          1人
+                        </p>
+                        <p>
+                          <strong>制作意図</strong><br>
+                          <a href="https://unityroom.com/unity1weeks/64" target="_blank">Unity1週間ゲームジャム お題「かえす」</a>への投稿作品として制作しました。短期間で完成度の高いゲームを制作するスキルを磨くことを目的としました。また、初めての3Dゲーム制作に挑戦しました。
+                        </p>
                         <ul>
-                            <li><strong>開発期間：</strong> 1週間 </li>
-                            <li><strong>所要時間数の概算：</strong> 50時間 </li>
-                            <li><strong>開発メンバー：</strong> 1人 </li>
-                            <li><strong>動作環境：</strong> Web (<a href="https://unityroom.com/games/japanese_pancakes" target="_blank">unityroom</a>) </li>
-                            <li><strong>操作方法：</strong>
-                                <ul>
-                                    <li>マウス：フライパンを傾ける </li>
-                                    <li>Esc：メニュー画面表示 </li>
-                                </ul>
-                            </li>
-                            <li><strong>制作意図：</strong> Unity1週間ゲームジャムのお題「かえす」への投稿作品として制作しました。短期間で完成度の高いゲームを制作するスキルを磨くことを目的としました。 </li>
+                          <strong>こだわった点</strong>
+                          <li>・ゲーム中に登場するセミやフライパンはBlenderを用いて作成しました。</li>
+                          <li>・スコアに応じてエンディングが変化するマルチエンディングを実装しました。また、unityroomにてスコアランキングを実装しました。これにより、プレイヤーに目的意識を与え、ゲーム体験を向上させました。</li>
+                          <li>・マウス感度やX軸反転、Y軸反転を好みに応じて設定できるようにしました。</li>
+                          <li>・時間経過に応じて背景やパンケーキの色（焼き加減）が変化するようにしました。</li>
+                          <li>・厳密な衝突処理を実装すると上手くパンケーキをひっくり返す挙動が再現できず、また制作時間も限られていたため、あえて緩い衝突処理とすることでパンケーキをひっくり返す挙動を再現しました。</li>
                         </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project">
-                <h3>アイアムマン (IamMan)</h3>
-                <div class="project-details">
-                    <div class="project-media">
-                        <h4>スクリーンショット</h4>
-                        <div class="screenshots">
-                           <img src="Images/IamMan/play.png" alt="IamMan Screenshot 1">
-                        </div>
-                        <h4>プレイ動画</h4>
-                        <div class="video-container">
-                           <iframe src="Movies/IamMan.mp4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                    </div>
-                    <div>
-                        <p><strong>ゲーム説明：</strong> 2D物理アクションゲームです。鉄のスーツを着た男を操作し、手足からのガス噴射を調整して姿勢を制御し、ゴール地点に5秒以上静止することでステージクリアとなります。これが私が初めて制作したゲームです。 </p>
-                        <ul>
-                            <li><strong>開発期間：</strong> 1ヶ月 </li>
-                            <li><strong>所要時間数の概算：</strong> 100時間 </li>
-                            <li><strong>開発メンバー：</strong> 1人 </li>
-                            <li><strong>動作環境：</strong> Web (<a href="https://unityroom.com/games/i_am_man" target="_blank">unityroom</a>) </li>
-                            <li><strong>操作方法：</strong>
-                                <ul>
-                                    <li>左クリック：手からガス噴出 </li>
-                                    <li>スペースキー：足からガス噴出 </li>
-                                    <li>マウスカーソル：腕の向きを変える </li>
-                                    <li>Rキー：リトライ </li>
-                                </ul>
-                            </li>
-                            <li><strong>制作意図：</strong> サークル活動の一環として学園祭の展示用に制作し、Unityの基礎知識を身に着けることを目標としました。 </li>
-                        </ul>
+                        <p>
+                          <strong>リンク</strong><br>
+                          <a href="https://unityroom.com/games/japanese_pancakes" target="_blank">unityroom</a>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -265,22 +278,118 @@
                            <iframe src="Movies/Goggle.dino.mp4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
                     </div>
-                    <div>
-                        <p><strong>ゲーム説明：</strong> Google Chromeの"chrome://dino"をオマージュしたランゲームです。障害物をよけ続けてハイスコアを目指します。本家との違いは、時間が経つと視界がぼやけてモザイクがかかり、瞬きをすることで元に戻るという点です。 </p>
-                        <ul>
-                            <li><strong>開発期間：</strong> 1週間 </li>
-                            <li><strong>所要時間数の概算：</strong> 50時間 </li>
-                            <li><strong>開発メンバー：</strong> 1人 </li>
-                            <li><strong>動作環境：</strong> Web (<a href="https://unityroom.com/games/goggle_dino" target="_blank">unityroom</a>) </li>
-                            <li><strong>操作方法：</strong>
-                                <ul>
-                                    <li>[Space] / [↑]：ジャンプ </li>
-                                    <li>[↓]：しゃがむ </li>
-                                    <li>[←] / [→]：目をつぶる </li>
-                                </ul>
-                            </li>
-                            <li><strong>制作意図：</strong> Unity1週間ゲームジャムのお題「あい」への投稿作品として制作しました。短期間で完成度の高いゲームを制作するスキルを磨くことを目的としました。 </li>
-                        </ul>
+                    <div class="project-explain">
+                      <p>
+                        <strong>ゲーム説明</strong><br>
+                        Google Chromeの"chrome://dino"をオマージュしたランゲームです。障害物をよけ続けてハイスコアを目指します。
+                        本家との違いは、時間が経つと視界がぼやけて画面にモザイクがかかるという点です。
+                        モザイクは瞬きをすることで元に戻ります。
+                        「瞬きをすると画面が見えなくなってしまうが、放置しても画面が見えずらい」というジレンマにどう対処していくか、というのがこのゲーム独自の面白さになっています。
+                      </p>
+                      <p>
+                        <strong>開発期間</strong><br>
+                        1週間（50時間程度）
+                      </p>
+                      <p>
+                        <strong>開発メンバー</strong><br>
+                        1人
+                      </p>
+                      <p>
+                        <strong>制作意図</strong><br>
+                        <a href="https://unityroom.com/unity1weeks/66" target="_blank">Unity1週間ゲームジャム お題「あい」</a>への投稿作品として制作しました。短期間で完成度の高いゲームを制作するスキルを磨くことを目的としました。
+                      </p>
+                      <ul>
+                        <strong>こだわった点</strong>
+                        <li>・操作やルールが複雑なため、チュートリアルを工夫しました。具体的には、操作やゲームルール、画面UIを段階的に一つずつ説明していくことで、理解しやすいチュートリアルを心掛けました。</li>
+                        <li>・ゲームが上手い人だとモザイクがかかった状態でも簡単にプレイできてしまうということを考慮して、モザイクがかかった状態だとスコア倍率に補正をかけるようにし、瞬きをする意味を持たせました。これにより意図したゲーム性になったと考えています。</li>
+                        <li>・プレイしてくれた友人から「目がチカチカする」という意見を頂いたので、瞬きの画面の色を黒からグレーへと変更することで、プレイヤーへの負担を軽減しました。</li>
+                        <li>・unityroomのランキングをハイスコアランキングと走行距離ランキングの2つを用意することによって、「ハイスコアを狙うか、堅実に距離を稼ぐか」という戦略性が生まれ、ゲームプレイの奥深さを実現しました。</li>
+                        <li>・当たり判定を実際の大きさよりわずかに小さくし、プレイヤーに理不尽さを感じさせない工夫をしました。</li>
+                      </ul>
+                      <p>
+                        <strong>リンク</strong><br>
+                        <a href="https://unityroom.com/games/goggle_dino" target="_blank">unityroom</a>
+                      </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project">
+                <h3>アイアムマン</h3>
+                <div class="project-details">
+                    <div class="project-media">
+                        <h4>スクリーンショット</h4>
+                        <div class="screenshots">
+                           <img src="Images/IamMan/play.png" alt="IamMan Screenshot 1">
+                        </div>
+                        <h4>プレイ動画</h4>
+                        <div class="video-container">
+                           <iframe src="Movies/IamMan.mp4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="project-explain">
+                      <p>
+                        <strong>ゲーム説明</strong><br>
+                        2D物理アクションゲームです。
+                        鉄のスーツを着た男を操作し、ゴール地点を目指します。
+                        手足からのガス噴射を調整して姿勢を制御し、ゴール地点に5秒以上静止することでステージクリアとなります。
+                        初めて制作したゲームです。
+                      </p>
+                      <p>
+                        <strong>開発期間</strong><br>
+                        1ヶ月
+                      </p>
+                      <p>
+                        <strong>開発メンバー</strong><br>
+                        1人
+                      </p>
+                      <p>
+                        <strong>制作意図</strong><br>
+                        Unityの基礎を身に着けることを目標としました。
+                      </p>
+                      <ul>
+                        <strong>こだわった点</strong>
+                        <li>・ミスした際に自動的にリスタートするようにし、スムーズなゲーム体験を実現しました。</li>
+                      </ul>
+                      <p>
+                        <strong>リンク</strong><br>
+                        <a href="https://unityroom.com/games/i_am_man" target="_blank">unityroom</a>
+                      </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project">
+                <h3>DreamMayday</h3>
+                <div class="project-details">
+                    <div class="project-media">
+                    BitSummit2025に向けて開発中です    
+                    </div>
+                    <div class="project-explain">
+                      <p>
+                        <strong>ゲーム説明</strong><br>
+                        BitSummitGameJam2025にて開発中
+                      </p>
+                      <p>
+                        <strong>開発期間</strong><br>
+                        3ヶ月
+                      </p>
+                      <p>
+                        <strong>開発メンバー</strong><br>
+                        10人（プランナー：3人、プログラマー：4人、デザイナー：3人）
+                      </p>
+                      <p>
+                        <strong>役割</strong><br>
+                        プログラマーリーダー
+                      </p>
+                      <p>
+                        <strong>制作意図</strong><br>
+                        チーム開発経験を積む
+                      </p>
+                      <ul>
+                        <strong>こだわった点</strong>
+                        
+                      </ul>
                     </div>
                 </div>
             </div>
@@ -290,15 +399,62 @@
 
         <section id="skills">
             <h2>Skills</h2>
-             <ul>
-                <li>C</li>
-                <li>C++</li>
-                <li>C#</li>
-                <li>Python</li>
-                <li>Shell</li>
-                <li>Unity</li>
-                <li>Git</li>
-            </ul>
+            <table class="skills-table">
+                <thead>
+                    <tr>
+                        <th>言語・ツール</th>
+                        <th>使用年数</th>
+                        <th>詳細</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>C</td>
+                        <td>1年</td>
+                        <td>配列、ポインタ、ファイル処理などの基礎的な知識。</td>
+                    </tr>
+                    <tr>
+                        <td>C++</td>
+                        <td>3ヶ月</td>
+                        <td>Atcoderで勉強中。C問題が解けるかどうかのレベル。</td>
+                    </tr>
+                    <tr>
+                        <td>C#</td>
+                        <td>3年</td>
+                        <td>Unityで使用。アルゴリズム関連は初心者レベル。UnityEngineを用いた処理は中～上級者レベル。</td>
+                    </tr>
+                    <tr>
+                        <td>Python</td>
+                        <td>1年半</td>
+                        <td>機械学習やLLMのファインチューニング、データ処理など。</td>
+                    </tr>
+                    <tr>
+                        <td>Linux</td>
+                        <td>1年</td>
+                        <td>ファイル・ディレクトリ操作などの基本的な知識。</td>
+                    </tr>
+                    <tr>
+                        <td>Git</td>
+                        <td>1年</td>
+                        <td>GitHubを用いたチーム開発経験、基本的なブランチ操作など。</td>
+                    </tr>
+                    <tr>
+                        <td>Docker</td>
+                        <td>3ヶ月</td>
+                        <td>Dockerfileからのイメージ作成、コンテナ作成など。</td>
+                    </tr>
+                    <tr>
+                        <td>Unity</td>
+                        <td>3年</td>
+                        <td>2D/3Dゲーム開発経験。チーム開発経験。</td>
+                    </tr>
+                    <tr>
+                        <td>Blender</td>
+                        <td>1週間</td>
+                        <td>ゲームの3Dモデルを制作する際に使用。</td>
+                    </tr>
+                </tbody>
+            </table>
         </section>
 
         <hr>
@@ -308,6 +464,7 @@
             <ul>
                 <li><a href="https://github.com/tanahashi415" target="_blank">GitHub</a></li>
                 <li><a href="https://unityroom.com/users/5mblykan2p7xvrgi0h1t" target="_blank">unityroom</a></li>
+                <li><a href="https://atcoder.jp/users/yoCmasa" target="_blank">Atcoder</a></li>
             </ul>
         </section>
 
@@ -315,13 +472,13 @@
 
         <section id="contact-me">
             <h2>Contact Me</h2>
-            <p>お仕事のご依頼・ご相談は、以下のメールアドレスまでご連絡ください。</p>
+            <p>以下のメールアドレスまでご連絡ください。</p>
             <p>Email: <a href="mailto:tnhs_jobhunting@outlook.jp">tnhs_jobhunting@outlook.jp</a></p>
         </section>
     </div>
 
     <footer>
-        <p>&copy; 2025 Your Name</p>
+        <p>&copy; 2025 Tanahashi</p>
     </footer>
 </body>
 </html>
