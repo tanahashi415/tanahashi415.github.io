@@ -181,7 +181,7 @@
     <header>
         <div class="container">
             <h1>Tanahashi's Portfolio</h1>
-            <p class="last-updated">最終更新日：2025年7月18日</p>
+            <p class="last-updated">最終更新日：2025年8月17日</p>
         </div>
     </header>
 
@@ -199,8 +199,8 @@
         <section id="about-me">
             <h2>About Me</h2>
             <!--<h3>自己紹介</h3>-->
-            <p>27卒のゲームプログラマーを目指している大学院生です。大学院では生成AIの応用に関する研究をしています。</p>
-            <p>普段からUnityでゲームを作って、学園祭で展示したり<a href="https://unityroom.com/users/5mblykan2p7xvrgi0h1t" target="_blank" rel="noopener noreferrer">unityroom</a>に投稿したりしています。最近はプログラミングスキル向上のために<a href="https://atcoder.jp/users/yoCmasa" target="_blank" rel="noopener noreferrer">競技プログラミング</a>を始めました。趣味はゲームはもちろん、リアル脱出ゲームのような謎解きや、ボードゲームにも目がありません。</p>
+            <p>27卒のゲームプログラマーを目指している大学院生です。</p>
+            <p>普段からUnityでゲームを作って、学園祭で展示したり<a href="https://unityroom.com/users/5mblykan2p7xvrgi0h1t" target="_blank" rel="noopener noreferrer">unityroom</a>に投稿したりしています。大学院では生成AIの応用に関する研究をしています。<!--最近はプログラミングスキル向上のために<a href="https://atcoder.jp/users/yoCmasa" target="_blank" rel="noopener noreferrer">競技プログラミング</a>を始めました。-->趣味はゲームはもちろん、リアル脱出ゲームのような謎解きや、ボードゲームにも目がありません。</p>
             <p>面白いゲームやロジックについて話すのが大好きなので、ぜひ皆さんと色々お話しできたら嬉しいです。</p>
             <!--
             <h3>学歴</h3>
@@ -218,6 +218,121 @@
 
         <section id="projects">
             <h2>Projects</h2>
+
+            <div class="project">
+                <h3>DreamMayday</h3>
+                <h4>（「<a href="https://bitsummit.org/" target="_blank" rel="noopener noreferrer">BitSummit the 13th</a>」で「BitSummit GAME JAM AWARD」を受賞しました！）</h4>
+                <div class="project-details">
+                    <div class="project-media">
+                        <h4>スクリーンショット</h4>
+                        <div class="screenshots">
+                            <img src="Images/DreamMayday/a24opT.png" alt="IamMan Screenshot 1">
+                            <img src="Images/DreamMayday/ckWmyt.png" alt="IamMan Screenshot 1">
+                            <img src="Images/DreamMayday/33Y2pq.png" alt="IamMan Screenshot 1">
+                            <img src="Images/DreamMayday/beR923.png" alt="IamMan Screenshot 1">
+                        </div>
+                        <h4>プレイ動画</h4>
+                        <div class="video-container">
+                           <iframe width="560" height="315" src="https://www.youtube.com/embed/t4DQaSw2VJk?si=IP3HIFmahrjd52u8" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>  
+                    </div>
+                    <div class="project-explain">
+                      <p>
+                        <strong>ゲーム説明</strong><br>
+                        <p>あなたたちは、夢を守る“ドリームサポーター”。 
+                        夢と現実、それぞれの視点から、住人たちの快適な眠りを守る2人の協力プレイ。 
+                        異変のサインを見逃さず、力を合わせて朝9時までに“ぐっすり快眠”を届けよう！</p>
+                        <p>夢側の君は眠る人の夢を見守り、異変があればすぐに相棒に知らせて対処してもらおう！</p>
+                        <p>現実側の君は、報告された異変の原因を現実世界から探し出し、素早く対処しよう！</p>
+                        <p>これは、2人だからこそ成立する “夢 × 現実” 協力コミュニケーションゲームです！</p>
+                      </p>
+                      <p>
+                        <strong>開発期間</strong><br>
+                        3ヶ月
+                      </p>
+                      <p>
+                        <strong>開発メンバー</strong><br>
+                        10人（プランナー：3人、プログラマー：4人、デザイナー：3人）
+                      </p>
+                      <p>
+                        <strong>役割</strong><br>
+                        プログラマーリーダー
+                      </p>
+                      <p>
+                        <strong>担当箇所</strong><br>
+                        モック版作成、現実シーン作成、現実と夢の相互作用システム実装
+                      </p>
+                      <p>
+                        <strong>制作意図</strong><br>
+                        チーム開発経験を積む
+                      </p>
+                      <ul>
+                        <strong>こだわった点</strong>
+                        <li>・ソースコードに適宜コメントアウトをして、読みやすいコードを心掛けました。</li>
+                        <li>・オブジェクトの描画順を動的に変更することで、2Dでありながらも奥行きがあるように見せています。</li>
+                        <li>・部屋の割り当てをゲーム起動時に毎回ランダムに設定することで、何度でも楽しめるような工夫をしています。</li>
+                        <li>・タグやトリガー（非接触の当たり判定）を使い分けることで、複数の当たり判定を同時に処理できるようにしています。</li>
+                      </ul>
+                      <p>
+                        <strong>リンク</strong><br>
+                        <a href="https://github.com/BSGJ2025-w-12/DreamMayday_Scripts" target="_blank" rel="noopener noreferrer">GitHub</a><br>
+                        <a href="https://bitsummit-gamejam.itch.io/dreammayday" target="_blank" rel="noopener noreferrer">itch.io</a>
+                      </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project">
+                <h3>一矢当千（いっしとうせん）</h3>
+                <div class="project-details">
+                    <div class="project-media">
+                        <h4>スクリーンショット</h4>
+                        <div class="screenshots">
+                           <img src="Images/GreatArcher/title.png" alt="GreatArcher Screenshot 1">
+                           <img src="Images/GreatArcher/play1.png" alt="GreatArcher Screenshot 2">
+                           <img src="Images/GreatArcher/play2.png" alt="GreatArcher Screenshot 3">
+                        </div>
+                        <h4>プレイ動画</h4>
+                        <div class="video-container">
+                           <iframe src="Movies/GreatArcher.mp4" title="YouTube video player" frameborder="0" allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="project-explain">
+                      <p>
+                        <strong>ゲーム説明</strong><br>
+                        エルフとなり弓を引いて森を守る「シューティング×ローグライク×タワーディフェンス」ゲームです。
+                        買い物による能力強化と戦闘を交互に繰り返します。
+                        最後のウェーブにやって来るボスを倒すとゲームクリアです！
+                      </p>
+                      <p>
+                        <strong>開発期間</strong><br>
+                        1週間（50時間程度）
+                      </p>
+                      <p>
+                        <strong>開発メンバー</strong><br>
+                        1人
+                      </p>
+                      <p>
+                        <strong>制作意図</strong><br>
+                        <a href="https://unityroom.com/unity1weeks/67" target="_blank" rel="noopener noreferrer">Unity1週間ゲームジャム お題「ひく」</a>への投稿作品として制作しました。短期間で完成度の高いゲームを制作するスキルを磨くことを目的としました。
+                      </p>
+                      <ul>
+                        <strong>こだわった点</strong>
+                        <li>・「敵を"引き"つけて一気に貫く爽快感」を実現するために、攻撃ヒット時の音の高さをコンボ数に応じて高くするシステムや、ヒットストップを実装しました。</li>
+                        <li>・敵の実装では、Enemyという汎用クラスを作り、そこから適宜派生させていくクラス設計をしました。これにより、仕様変更が容易になりました。</li>
+                        <li>・ゲームシステムのスクリプトを機能ごとに分けることで、可読性を確保しました。</li>
+                        <li>・ステージ構成やキャラクターのパラメータを調整しやすいように、インスペクターから変更できるようにしました。</li>
+                        <li>・複数の強化パラメータを用意することで、戦略性を持たせました。</li>
+                      </ul>
+                      <p>
+                        <strong>リンク</strong><br>
+                        <a href="https://github.com/tanahashi415/Great-Archer" target="_blank" rel="noopener noreferrer">GitHub</a><br>
+                        <a href="https://unityroom.com/games/great-archer" target="_blank" rel="noopener noreferrer">unityroom</a>
+                      </p>
+                    </div>
+                </div>
+            </div>
+
             <div class="project">
                 <h3>JAPANESE PANCAKES</h3>
                 <div class="project-details">
@@ -360,68 +475,7 @@
                     </div>
                 </div>
             </div>
-
-            <div class="project">
-                <h3>DreamMayday</h3>
-                <div class="project-details">
-                    <div class="project-media">
-                        <h4>スクリーンショット</h4>
-                        <div class="screenshots">
-                            <img src="Images/DreamMayday/a24opT.png" alt="IamMan Screenshot 1">
-                            <img src="Images/DreamMayday/ckWmyt.png" alt="IamMan Screenshot 1">
-                            <img src="Images/DreamMayday/33Y2pq.png" alt="IamMan Screenshot 1">
-                            <img src="Images/DreamMayday/beR923.png" alt="IamMan Screenshot 1">
-                        </div>
-                        <h4>プレイ動画</h4>
-                        <div class="video-container">
-                           <iframe width="560" height="315" src="https://www.youtube.com/embed/t4DQaSw2VJk?si=IP3HIFmahrjd52u8" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                        </div>  
-                    </div>
-                    <div class="project-explain">
-                      <p>
-                        <strong>ゲーム説明</strong><br>
-                        <p>あなたたちは、夢を守る“ドリームサポーター”。 
-                        夢と現実、それぞれの視点から、住人たちの快適な眠りを守る2人の協力プレイ。 
-                        異変のサインを見逃さず、力を合わせて朝9時までに“ぐっすり快眠”を届けよう！</p>
-                        <p>夢側の君は眠る人の夢を見守り、異変があればすぐに相棒に知らせて対処してもらおう！</p>
-                        <p>現実側の君は、報告された異変の原因を現実世界から探し出し、素早く対処しよう！</p>
-                        <p>これは、2人だからこそ成立する “夢 × 現実” 協力コミュニケーションゲームです！</p>
-                      </p>
-                      <p>
-                        <strong>開発期間</strong><br>
-                        3ヶ月
-                      </p>
-                      <p>
-                        <strong>開発メンバー</strong><br>
-                        10人（プランナー：3人、プログラマー：4人、デザイナー：3人）
-                      </p>
-                      <p>
-                        <strong>役割</strong><br>
-                        プログラマーリーダー
-                      </p>
-                      <p>
-                        <strong>担当箇所</strong><br>
-                        モック版作成、現実シーン作成
-                      </p>
-                      <p>
-                        <strong>制作意図</strong><br>
-                        チーム開発経験を積む
-                      </p>
-                      <ul>
-                        <strong>こだわった点</strong>
-                        <li>・ソースコードに適宜コメントアウトをして、読みやすいコードを心掛けました。</li>
-                        <li>・オブジェクトの描画順を動的に変更することで、2Dでありながらも奥行きがあるように見せています。</li>
-                        <li>・部屋の割り当てをゲーム起動時に毎回ランダムに設定することで、何度でも楽しめるような工夫をしています。</li>
-                        <li>・タグやトリガー（非接触の当たり判定）を使い分けることで、複数の当たり判定を同時に処理できるようにしています。</li>
-                      </ul>
-                      <p>
-                        <strong>リンク</strong><br>
-                        <a href="https://github.com/BSGJ2025-w-12/DreamMayday_Scripts" target="_blank" rel="noopener noreferrer">GitHub</a><br>
-                        <a href="https://bitsummit-gamejam.itch.io/dreammayday" target="_blank" rel="noopener noreferrer">itch.io</a>
-                      </p>
-                    </div>
-                </div>
-            </div>
+            
         </section>
 
         <hr>
@@ -444,7 +498,7 @@
                     </tr>
                     <tr>
                         <td>C++</td>
-                        <td>3ヶ月</td>
+                        <td>4ヶ月</td>
                         <td>Atcoderで勉強中。C問題が解けるかどうかのレベル。</td>
                     </tr>
                     <tr>
