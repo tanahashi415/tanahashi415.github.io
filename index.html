@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +11,7 @@
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #fff9f2;
             color: #333;
         }
         .container {
@@ -71,13 +72,17 @@
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
+        h1 {
+            /* ナビゲーションバーの高さ分（またはそれ以上）の余白をジャンプ時に確保します */
+            scroll-margin-top: 80px; 
+            font-size: 2.1rem;
+        }
         h2 {
             color: #333;
-            border-bottom: 2px solid #f4f4f4;
-            padding-bottom: 10px;
+            font-size: 1.5rem;
         }
         h3 {
-            color: #333;
+            color: #ff0000;
         }
         .project {
             margin-bottom: 20px;
@@ -86,6 +91,12 @@
         }
         .project:last-child {
             border-bottom: none;
+        }
+        .project h2 {
+            color: #333;
+            border-bottom: 2px solid #505050;
+            padding-bottom: 20px;
+            font-size: 1.7rem;
         }
         .project h3 {
             margin-top: 0;
@@ -177,11 +188,13 @@
         }
     </style>
 </head>
+
+
 <body>
     <header>
         <div class="container">
             <h1>Tanahashi's Portfolio</h1>
-            <p class="last-updated">最終更新日：2025年12月7日</p>
+            <p class="last-updated">最終更新日：2026年1月18日</p>
         </div>
     </header>
 
@@ -191,16 +204,21 @@
             <li><a href="#projects">Projects</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#links">Links</a></li>
-            <li><a href="#contact-me">Contact me</a></li>
+            <!--<li><a href="#contact-me">Contact me</a></li>-->
         </ul>
     </nav>
 
     <div class="container">
-        <section id="about-me">
-            <h1>About Me</h1>
+        <h1 id="about-me">About me</h1>
+        <section>
             <!--<h3>自己紹介</h3>-->
             <p>27卒のゲームプログラマーを目指している大学院生です。</p>
-            <p>普段からUnityでゲームを作って、学園祭で展示したり<a href="https://unityroom.com/users/5mblykan2p7xvrgi0h1t" target="_blank" rel="noopener noreferrer">unityroom</a>に投稿したりしています。大学院では生成AIの応用に関する研究をしています。<!--最近はプログラミングスキル向上のために<a href="https://atcoder.jp/users/yoCmasa" target="_blank" rel="noopener noreferrer">競技プログラミング</a>を始めました。-->趣味はゲームはもちろん、リアル脱出ゲームのような謎解きや、ボードゲームにも目がありません。</p>
+            <p>
+                普段からUnityでゲームを作って、学園祭で展示したり<a href="https://unityroom.com/users/5mblykan2p7xvrgi0h1t" target="_blank" rel="noopener noreferrer">unityroom</a>に投稿したりしています。<br>
+                大学では生成AIの応用に関する研究をしています。<br>
+                <!--最近はプログラミングスキル向上のために<a href="https://atcoder.jp/users/yoCmasa" target="_blank" rel="noopener noreferrer">競技プログラミング</a>を始めました。<br>-->
+                趣味はゲームはもちろん、リアル脱出ゲームのような謎解きや、ボードゲームにも目がありません。<br>
+            </p>
             <!--<p>面白いゲームやロジックについて話すのが大好きなので、ぜひ皆さんと色々お話しできたら嬉しいです。</p>-->
             <!--
             <h3>学歴</h3>
@@ -216,12 +234,70 @@
 
         <hr>
 
-        <section id="projects">
-            <h1>Projects</h1>
-
+        <h1 id="projects">Projects</h1>
+        <h2>・<u>チーム作品</u></h2>
+        <section>
             <div class="project">
-                <h2>DreamMayday</h2>
-                <h4>（「<a href="https://bitsummit.org/" target="_blank" rel="noopener noreferrer">BitSummit the 13th</a>」で「BitSummit GAME JAM AWARD」を受賞しました！）</h4>
+                <h2>GROG</h2>
+                <h3>「プロトスプリントリーグ」で最優秀賞を受賞しました！</h3>
+                <div class="project-details">
+                    <div class="project-media">
+                        <h4>スクリーンショット</h4>
+                        <div class="screenshots">
+                            <img src="Images/GROG/Stage1.png" alt="GROG Screenshot 1">
+                            <img src="Images/GROG/Stage6.png" alt="GROG Screenshot 2">
+                            <img src="Images/GROG/Stage7.png" alt="GROG Screenshot 3">
+                            <img src="Images/GROG/StageEX.png" alt="GROG Screenshot 4">
+                        </div>
+                        <h4>プレイ動画</h4>
+                        <div class="video-container">
+                            <iframe src="Movies/GROG.mp4" title="YouTube video player" frameborder="0" allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="project-explain">
+                      <p>
+                        <strong>ゲーム説明</strong><br>
+                        スマホの向きを変えることで重力を変化させステージクリアを目指していく、2Dアクションパズルゲームです。
+                      </p>
+                      <p>
+                        <strong>開発期間</strong><br>
+                        2025年12月20日～21日（約11時間）
+                      </p>
+                      <p>
+                        <strong>制作メンバー</strong><br>
+                        3人
+                      </p>
+                      <p>
+                        <strong>担当箇所</strong><br>
+                        企画、レベルデザイン、プレイヤー挙動
+                      </p>
+                      <p>
+                        <strong>制作背景</strong><br>
+                        株式会社サイバーエージェント様のインターン「プロトスプリントリーグ」にて制作しました。
+                        「かえる」というテーマのもと、スマホの向きを"変える"ことで操作するゲームを企画し、制作しました。
+                      </p>
+                      <ul>
+                        <strong>こだわった点</strong>
+                        <li>・ステージごとにユーザーに学んで欲しいことを定義し、それを基にステージ構成を決めることで、ユーザーが段階的にゲームの操作を習得できるようなレベルデザインを目指しました。</li>
+                        <li>・「ステージをクリアすること自体は簡単であるが、収集要素である王冠を3つ取得しようとすると難しい」というステージ構成にすることで、ユーザーのプレイスタイルに合わせたゲーム体験の提供を目指しました。</li>
+                        <li>・重力が変わってもプレイヤーが意図した方向に進むようにプログラムを工夫しました。
+                            具体的には、プレイヤーの座標からタッチした座標へ向かうベクトルとプレイヤーのX軸正方向のベクトルの間の角度をもとに、右に動くか左に動くかを決定しています。
+                        </li>
+                      </ul>
+                      <p>
+                        <strong>リンク</strong><br>
+                        <a href="https://drive.google.com/drive/folders/1UVgaU7ow26G74mniabvwtZK-2I_3Ok30?usp=drive_link" target="_blank" rel="noopener noreferrer">各種資料</a><br>
+                        <a href="https://note.com/preview/naa128b1a56e6?prev_access_key=7e0e778607d8c4beedd432ba603ff4fe" target="_blank" rel="noopener noreferrer">開発ノート</a><br>
+                      </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="project">
+                <h2>ドリームメーデー</h2>
+                <h3>「BitSummit the 13th」で「BitSummit GAME JAM AWARD」を受賞しました！</h3>
                 <div class="project-details">
                     <div class="project-media">
                         <h4>スクリーンショット</h4>
@@ -243,49 +319,50 @@
                     <div class="project-explain">
                       <p>
                         <strong>ゲーム説明</strong><br>
-                        <p>あなたたちは、夢を守る“ドリームサポーター”。 
-                        夢と現実、それぞれの視点から、住人たちの快適な眠りを守る2人の協力プレイ。 
-                        異変のサインを見逃さず、力を合わせて朝9時までに“ぐっすり快眠”を届けよう！</p>
-                        <p>夢側の君は眠る人の夢を見守り、異変があればすぐに相棒に知らせて対処してもらおう！</p>
-                        <p>現実側の君は、報告された異変の原因を現実世界から探し出し、素早く対処しよう！</p>
-                        <p>これは、2人だからこそ成立する “夢 × 現実” 協力コミュニケーションゲームです！</p>
+                        球体型の特殊モニターを用いる2人専用の協力ゲームです。
+                        プレイヤーは夢側と現実側に分かれ、夢に起きる異変を協力して解決していきます。
                       </p>
                       <p>
                         <strong>開発期間</strong><br>
-                        3ヶ月
+                        2025年4月～7月
                       </p>
                       <p>
-                        <strong>開発メンバー</strong><br>
+                        <strong>制作メンバー</strong><br>
                         10人（プランナー：3人、プログラマー：4人、デザイナー：3人）
                       </p>
                       <p>
                         <strong>役割</strong><br>
-                        プログラマーリーダー
+                        リードプログラマー
                       </p>
                       <p>
                         <strong>担当箇所</strong><br>
                         モック版作成、現実シーン作成、現実と夢の相互作用システム実装
                       </p>
                       <p>
-                        <strong>制作意図</strong><br>
-                        チーム開発経験を積む
+                        <strong>制作背景</strong><br>
+                        本作は「BitSummit Game Jam」という企画の中でチーム開発された作品です。
+                        テーマである「妖×妙」に沿って、夢に関連したゲームを作ろうと考え、夢と現実という2つの世界をそれぞれ異なるモニターで表現しました。
+                        そのうち、夢の世界を象徴するモニターとして、球体型の特殊モニターを採用しています。
                       </p>
                       <ul>
                         <strong>こだわった点</strong>
                         <li>・ソースコードに適宜コメントアウトをして、読みやすいコードを心掛けました。</li>
                         <li>・オブジェクトの描画順を動的に変更することで、2Dでありながらも奥行きがあるように見せています。</li>
-                        <li>・部屋の割り当てをゲーム起動時に毎回ランダムに設定することで、何度でも楽しめるような工夫をしています。</li>
+                        <li>・部屋の割り当てをゲーム起動時に毎回ランダムに設定することで、何度でも楽しめるような工夫をしています。ドアと遷移先の対応を変更することで実現しています。</li>
                         <li>・タグやトリガー（非接触の当たり判定）を使い分けることで、複数の当たり判定を同時に処理できるようにしています。</li>
                       </ul>
                       <p>
                         <strong>リンク</strong><br>
-                        <a href="https://github.com/BSGJ2025-w-12/DreamMayday_Scripts" target="_blank" rel="noopener noreferrer">GitHub</a><br>
+                        <a href="https://github.com/BSGJ2025-w-12/DreamMayday_Scripts" target="_blank" rel="noopener noreferrer">GitHub</a>（担当箇所はRealフォルダ内）<br>
                         <a href="https://bitsummit-gamejam.itch.io/dreammayday" target="_blank" rel="noopener noreferrer">itch.io</a>
                       </p>
                     </div>
                 </div>
             </div>
+        </section>
 
+        <h2>・<u>個人作品</u></h2>
+        <section>
             <div class="project">
                 <h2>一矢当千（いっしとうせん）</h2>
                 <div class="project-details">
@@ -310,23 +387,23 @@
                       </p>
                       <p>
                         <strong>開発期間</strong><br>
-                        1週間（50時間程度）
+                        2025年8月4日～11日（約50時間）
                       </p>
                       <p>
-                        <strong>開発メンバー</strong><br>
+                        <strong>制作メンバー</strong><br>
                         1人
                       </p>
                       <p>
-                        <strong>制作意図</strong><br>
+                        <strong>制作背景</strong><br>
                         <a href="https://unityroom.com/unity1weeks/67" target="_blank" rel="noopener noreferrer">Unity1週間ゲームジャム お題「ひく」</a>への投稿作品として制作しました。短期間で完成度の高いゲームを制作するスキルを磨くことを目的としました。
                       </p>
                       <ul>
                         <strong>こだわった点</strong>
                         <li>・「敵を"引き"つけて一気に貫く爽快感」を実現するために、攻撃ヒット時の音の高さをコンボ数に応じて高くするシステムや、ヒットストップを実装しました。</li>
-                        <li>・敵の実装では、Enemyという汎用クラスを作り、そこから適宜派生させていくクラス設計をしました。これにより、仕様変更が容易になりました。</li>
-                        <li>・ゲームシステムのスクリプトを機能ごとに分けることで、可読性を確保しました。</li>
+                        <li>・敵の実装では、Enemyという汎用クラスを作り、そこから適宜派生させていくクラス設計をしました。これにより、仕様の追加や変更が容易になりました。</li>
+                        <li>・ゲームシステムのスクリプトを機能ごとに分けることで、可読性や保守性を確保しました。</li>
                         <li>・ステージ構成やキャラクターのパラメータを調整しやすいように、インスペクターから変更できるようにしました。</li>
-                        <li>・複数の強化パラメータを用意することで、戦略性を持たせました。</li>
+                        <li>・複数の強化パラメータを用意することで、プレイに戦略性を持たせました。</li>
                       </ul>
                       <p>
                         <strong>リンク</strong><br>
@@ -336,7 +413,61 @@
                     </div>
                 </div>
             </div>
+        </section>
 
+        <section>
+            <div class="project">
+                <h2>Goggle.dino</h2>
+                <div class="project-details">
+                     <div class="project-media">
+                        <h4>スクリーンショット</h4>
+                        <div class="screenshots">
+                           <img src="Images/Goggle.dino/title.png" alt="Goggle.dino Screenshot 1">
+                           <img src="Images/Goggle.dino/play.png" alt="Goggle.dino Screenshot 2">
+                        </div>
+                        <h4>プレイ動画</h4>
+                        <div class="video-container">
+                           <iframe src="Movies/Goggle.dino.mp4" title="YouTube video player" frameborder="0" allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="project-explain">
+                      <p>
+                        <strong>ゲーム説明</strong><br>
+                        Google Chromeの「chrome://dino」をオマージュした2Dランゲームです。障害物をよけ続けてハイスコアを目指します。
+                        本家との違いは、時間が経つと視界がぼやけて画面にモザイクがかかるという点です。
+                        モザイクは瞬きをすることで元に戻ります。
+                        「瞬きをすると画面が見えなくなってしまうが、放置しても画面が見えづらい」というジレンマにどう対処していくか、というのがこのゲーム独自の面白さになっています。
+                      </p>
+                      <p>
+                        <strong>開発期間</strong><br>
+                        2025年4月13日～20日（約50時間）
+                      </p>
+                      <p>
+                        <strong>制作メンバー</strong><br>
+                        1人
+                      </p>
+                      <p>
+                        <strong>制作背景</strong><br>
+                        <a href="https://unityroom.com/unity1weeks/66" target="_blank" rel="noopener noreferrer">Unity1週間ゲームジャム お題「あい」</a>への投稿作品として制作しました。短期間で完成度の高いゲームを制作するスキルを磨くことを目的としました。
+                      </p>
+                      <ul>
+                        <strong>こだわった点</strong>
+                        <li>・操作やルールが複雑なため、チュートリアルを工夫しました。具体的には、操作やゲームルール、画面UIを段階的に一つずつ説明していくことで、理解しやすいチュートリアルを心掛けました。</li>
+                        <li>・ゲームが上手い人だとモザイクがかかった状態でも簡単にプレイできてしまうということを考慮して、モザイクがかかった状態だとスコア倍率に補正をかけるようにし、瞬きをする意味を持たせました。これにより意図したゲーム性になったと考えています。</li>
+                        <li>・プレイしてくれた友人から「目がチカチカする」という意見を頂いたので、瞬きの画面の色を黒からグレーへと変更することで、プレイヤーへの負担を軽減しました。</li>
+                        <li>・unityroomのランキングをハイスコアランキングと走行距離ランキングの2つを用意することによって、「ハイスコアを狙うか、堅実に距離を稼ぐか」という戦略性が生まれ、ゲームプレイの奥深さを実現しました。</li>
+                        <li>・当たり判定を実際の大きさよりわずかに小さくし、プレイヤーに理不尽さを感じさせない工夫をしました。</li>
+                      </ul>
+                      <p>
+                        <strong>リンク</strong><br>
+                        <a href="https://unityroom.com/games/goggle_dino" target="_blank" rel="noopener noreferrer">unityroom</a>
+                      </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
             <div class="project">
                 <h2>JAPANESE PANCAKES</h2>
                 <div class="project-details">
@@ -359,14 +490,14 @@
                         </p>
                         <p>
                           <strong>開発期間</strong><br>
-                          1週間（50時間程度）
+                          2024年8月11日～21日（約50時間）
                         </p>
                         <p>
-                          <strong>開発メンバー</strong><br>
+                          <strong>制作メンバー</strong><br>
                           1人
                         </p>
                         <p>
-                          <strong>制作意図</strong><br>
+                          <strong>制作背景</strong><br>
                           <a href="https://unityroom.com/unity1weeks/64" target="_blank" rel="noopener noreferrer">Unity1週間ゲームジャム お題「かえす」</a>への投稿作品として制作しました。短期間で完成度の高いゲームを制作するスキルを磨くことを目的としました。また、初めての3Dゲーム制作に挑戦しました。
                         </p>
                         <ul>
@@ -384,57 +515,9 @@
                     </div>
                 </div>
             </div>
+        </section>
 
-            <div class="project">
-                <h2>Goggle.dino</h2>
-                <div class="project-details">
-                     <div class="project-media">
-                        <h4>スクリーンショット</h4>
-                        <div class="screenshots">
-                           <img src="Images/Goggle.dino/title.png" alt="Goggle.dino Screenshot 1">
-                           <img src="Images/Goggle.dino/play.png" alt="Goggle.dino Screenshot 2">
-                        </div>
-                        <h4>プレイ動画</h4>
-                        <div class="video-container">
-                           <iframe src="Movies/Goggle.dino.mp4" title="YouTube video player" frameborder="0" allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                    </div>
-                    <div class="project-explain">
-                      <p>
-                        <strong>ゲーム説明</strong><br>
-                        Google Chromeの"chrome://dino"をオマージュした2Dランゲームです。障害物をよけ続けてハイスコアを目指します。
-                        本家との違いは、時間が経つと視界がぼやけて画面にモザイクがかかるという点です。
-                        モザイクは瞬きをすることで元に戻ります。
-                        「瞬きをすると画面が見えなくなってしまうが、放置しても画面が見えづらい」というジレンマにどう対処していくか、というのがこのゲーム独自の面白さになっています。
-                      </p>
-                      <p>
-                        <strong>開発期間</strong><br>
-                        1週間（50時間程度）
-                      </p>
-                      <p>
-                        <strong>開発メンバー</strong><br>
-                        1人
-                      </p>
-                      <p>
-                        <strong>制作意図</strong><br>
-                        <a href="https://unityroom.com/unity1weeks/66" target="_blank" rel="noopener noreferrer">Unity1週間ゲームジャム お題「あい」</a>への投稿作品として制作しました。短期間で完成度の高いゲームを制作するスキルを磨くことを目的としました。
-                      </p>
-                      <ul>
-                        <strong>こだわった点</strong>
-                        <li>・操作やルールが複雑なため、チュートリアルを工夫しました。具体的には、操作やゲームルール、画面UIを段階的に一つずつ説明していくことで、理解しやすいチュートリアルを心掛けました。</li>
-                        <li>・ゲームが上手い人だとモザイクがかかった状態でも簡単にプレイできてしまうということを考慮して、モザイクがかかった状態だとスコア倍率に補正をかけるようにし、瞬きをする意味を持たせました。これにより意図したゲーム性になったと考えています。</li>
-                        <li>・プレイしてくれた友人から「目がチカチカする」という意見を頂いたので、瞬きの画面の色を黒からグレーへと変更することで、プレイヤーへの負担を軽減しました。</li>
-                        <li>・unityroomのランキングをハイスコアランキングと走行距離ランキングの2つを用意することによって、「ハイスコアを狙うか、堅実に距離を稼ぐか」という戦略性が生まれ、ゲームプレイの奥深さを実現しました。</li>
-                        <li>・当たり判定を実際の大きさよりわずかに小さくし、プレイヤーに理不尽さを感じさせない工夫をしました。</li>
-                      </ul>
-                      <p>
-                        <strong>リンク</strong><br>
-                        <a href="https://unityroom.com/games/goggle_dino" target="_blank" rel="noopener noreferrer">unityroom</a>
-                      </p>
-                    </div>
-                </div>
-            </div>
-
+        <section>
             <div class="project">
                 <h2>アイアムマン</h2>
                 <div class="project-details">
@@ -454,18 +537,18 @@
                         2D物理アクションゲームです。
                         鉄のスーツを着た男を操作し、ゴール地点を目指します。
                         手足からのガス噴射を調整して姿勢を制御し、ゴール地点に5秒以上静止することでステージクリアとなります。
-                        初めて制作したゲームです。
                       </p>
                       <p>
                         <strong>開発期間</strong><br>
-                        1ヶ月
+                        2022年2月～4月
                       </p>
                       <p>
-                        <strong>開発メンバー</strong><br>
+                        <strong>制作メンバー</strong><br>
                         1人
                       </p>
                       <p>
-                        <strong>制作意図</strong><br>
+                        <strong>制作背景</strong><br>
+                        コンピュータサークル入部1年の節目に新入生歓迎用のゲームとして制作しました。
                         Unityの基礎を身に着けることを目標としました。
                       </p>
                       <ul>
@@ -479,13 +562,12 @@
                     </div>
                 </div>
             </div>
-            
         </section>
 
         <hr>
 
-        <section id="skills">
-            <h1>Skills</h1>
+        <h1 id="skills">Skills</h1>
+        <section>
             <table class="skills-table">
                 <thead>
                     <tr>
@@ -502,7 +584,7 @@
                     </tr>
                     <tr>
                         <td>C++</td>
-                        <td>7ヶ月</td>
+                        <td>9ヶ月</td>
                         <td>Atcoderで勉強中。茶色レート。C問題が大体解ける。</td>
                     </tr>
                     <tr>
@@ -528,7 +610,7 @@
                     <tr>
                         <td>Docker</td>
                         <td>3ヶ月</td>
-                        <td>Dockerfileからのイメージ作成、コンテナ作成などができる。</td>
+                        <td>Dockerfileの作成、イメージ作成、コンテナ作成などができる。</td>
                     </tr>
                     <tr>
                         <td>Unity</td>
@@ -551,8 +633,8 @@
 
         <hr>
 
-        <section id="links">
-            <h1>Links</h1>
+        <h1 id="links">Links</h1>
+        <section>
             <ul>
                 <li><a href="https://github.com/tanahashi415" target="_blank" rel="noopener noreferrer">GitHub</a></li>
                 <li><a href="https://unityroom.com/users/5mblykan2p7xvrgi0h1t" target="_blank" rel="noopener noreferrer">unityroom</a></li>
@@ -560,7 +642,7 @@
                 <li><a href="https://atcoder.jp/users/yoCmasa" target="_blank" rel="noopener noreferrer">Atcoder</a></li>
             </ul>
         </section>
-
+        <!--
         <hr>
 
         <section id="contact-me">
@@ -568,6 +650,7 @@
             <p>以下のメールアドレスまでご連絡ください。</p>
             <p>Gmail: yoshii44games@</p>
         </section>
+        -->
     </div>
 
     <footer>
